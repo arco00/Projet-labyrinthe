@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MapAff : MonoBehaviour
@@ -11,10 +12,10 @@ public class MapAff : MonoBehaviour
     public Transform dossier;
     void Start()
     {
-    carte =map.GetComponent<MapMatrice>().carte;
-    float hauteur=0;
-    float largeur=0;
-    foreach (List<string> innerList in carte)
+        carte =map.GetComponent<MapMatrix>().carte;
+        float hauteur=0;
+        float largeur=0;
+        foreach (List<string> innerList in carte)
         {largeur=0;
             foreach(string mot in innerList){
                 Vector3 pos=new Vector3(hauteur,largeur,0f);
@@ -29,11 +30,11 @@ public class MapAff : MonoBehaviour
                 }
                 else{
                     GameObject newCase =Instantiate (config.cases,pos,rota,dossier);
-                    newCase.GetComponentInChildren<TextMeshpro>.text=mot;
-                } 
-            largeur=largeur+0.5;
+                    newCase.GetComponentInChildren<TextMeshPro>().text=mot;
+                }
+                largeur=largeur+(1/2);
             }
-        hauteur=hauteur+0.5;
+            hauteur=hauteur+(1/2);
         }
 
     }

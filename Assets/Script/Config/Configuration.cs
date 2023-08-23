@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Config")]
 public class Configuration : ScriptableObject
 {
-     public GameObject cases;
+        public GameObject cases;
         public GameObject mur;
         public GameObject jonction;
 }

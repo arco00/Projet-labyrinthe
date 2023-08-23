@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapMatrice : MonoBehaviour
+public class MapMatrix : MonoBehaviour
 {
     public List<List<string>> carte= new List<List<string>>();
     public int tailleMapVertical;
     public int tailleMapHorizontal;
 
-    void Start()
+    void Awake()
     {
         //génération de la matrice du labyrinthe
        for(int i = 0; i < tailleMapVertical*2+1; i++){
