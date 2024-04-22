@@ -44,6 +44,7 @@ public class MapMatrix : MonoBehaviour
             
         }
 
+        //Debug.Log(carte[1][1]);
         //affichage de la matrice
         foreach (List<string> innerList in carte)
         {
